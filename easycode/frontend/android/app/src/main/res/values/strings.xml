@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">EasyCode</string>
+    <string name="title_activity_main">EasyCode</string>
+    <string name="package_name">com.easycode.app</string>
+    <string name="custom_url_scheme">com.easycode.app</string>
+</resources>

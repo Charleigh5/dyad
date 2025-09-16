@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Backend Services
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "3001:3001"
+    depends_on:
+      - user-service
+      - project-service
+      - chat-service
+      - workspace-service
+
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "3002:3002"
+
+  project-service:
+    build: ./services/project-service
+    ports:
+      - "3003:3003"
+
+  chat-service:
+    build: ./services/chat-service
+    ports:
+      - "3004:3004"
+
+  workspace-service:
+    build: ./services/workspace-service
+    ports:
+      - "3005:3005"
+
+  # Frontend Service
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80" # Access the UI at http://localhost:8080
